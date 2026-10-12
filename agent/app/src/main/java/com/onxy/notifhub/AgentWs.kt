@@ -21,7 +21,7 @@ object AgentWs {
     fun init(ctx: Context) {
         appCtx = ctx.applicationContext
         val prefs = ctx.getSharedPreferences("notifhub", Context.MODE_PRIVATE)
-        serverUrl = prefs.getString("server", "ws://100.77.29.105:3000/ws/ingest") ?: ""
+        serverUrl = prefs.getString("server", "ws://127.0.0.1:3000/ws/ingest") ?: ""
         token = prefs.getString("token", "") ?: ""
         deviceId = Settings.Secure.getString(ctx.contentResolver, Settings.Secure.ANDROID_ID) ?: "unknown"
     }
